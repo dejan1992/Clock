@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4f4;
+}
+
+.clock-container {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+  position: relative;
+}
+
+ /* clock analog */
+.clock-container .number {
+  --rotation: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(var(--rotation));
+}
+
+ .hand {
+  background: black;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 1px solid black;
+  border-radius: 12px 12px 0  0 ;
+  z-index: 1;
+  transform-origin: bottom;
+transform: translateX(-50%);
+}
+
+.second-hand{
+  width: 1px;
+  height: 42%;
+  background: red;
+  border: 1px solid red;
+  z-index: 2;
+}
+.minute-hand{
+  width: 2.5px;
+  height: 39%;
+}
+.hour-hand{
+  width: 2.5px;
+  height: 30%;
+}
+
+.clock-container::after{
+  content: '';
+  width: 15px;
+  height: 15px;
+  border: 1px solid red;
+ background: red; 
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
+  z-index: 2;
+} 
+
+/* display numbers */
+ .clock-container .number1 {--rotation:30deg;}
+ .clock-container .number2 {--rotation:60deg;}
+ .clock-container .number3 {--rotation:90deg;}
+ .clock-container .number4 {--rotation:1200deg;}
+ .clock-container .number5 {--rotation:150deg;}
+ .clock-container .number6 {--rotation:180deg;}
+ .clock-container .number7 {--rotation:210deg;}
+ .clock-container .number8 {--rotation:240deg;}
+ .clock-container .number9 {--rotation:270deg;}
+ .clock-container .number10 {--rotation:300deg;}
+ .clock-container .number11{--rotation:330deg;}
+
+ /* clock date */
+.clock-date{
+font-family: Tourney;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 46%;
+  left: 70%;
+  border: 1px solid black;
+}
+ /* clock digital */
+.clock-digital{
+  font-family: Tourney;
+  font-size: 1.4rem;
+  position: absolute;
+  bottom: 65%;
+  left: 34%;
+}
